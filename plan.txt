@@ -25,7 +25,6 @@ cli
 
 ---
 
-
 Talk plan
 
 Node.js test runner
@@ -48,6 +47,56 @@ But whats a test runner ?
     1. CLI that receives a folder and executes files
     2. Module that can order and report errors
 
+Test Suite: A collection of test cases grouped together, typically because they test related functionality.
+describe
+Test Case: An individual unit test that checks a specific functionality of the code.
+it
+Test Hierarchy:
+Organizes tests into a tree-like structure, making it easier to manage and understand the relationship between tests.
+
+A test runner is a crucial component in the software development process, designed to execute tests, manage test states, and report results. Here are the key components of a test runner:
+
+### 1. Test Suite Management
+
+**Test Suites and Test Cases:**
+- **Test Suite**: A collection of test cases grouped together, typically because they test related functionality.
+- **Test Case**: An individual unit test that checks a specific functionality of the code.
+
+**Test Hierarchy:**
+- Organizes tests into a tree-like structure, making it easier to manage and understand the relationship between tests.
+
+### 2. Test Execution
+
+**Execution Engine:**
+- Manages the execution of test cases and suites.
+- Handles the order in which tests are run, including setup and teardown procedures.
+
+**Hooks:**
+- **Before/After Hooks**: Code that runs before or after all tests in a suite.
+- **BeforeEach/AfterEach Hooks**: Code that runs before or after each individual test case.
+
+### 3. Test Isolation
+
+**Async Context Management:**
+- Ensures tests are run in isolated contexts, preventing side effects between tests.
+- Manages asynchronous operations within tests to maintain isolation.
+
+### 4. Result Reporting
+
+**Event Emission:**
+- Emits events at various stages of the test lifecycle (e.g., start, pass, fail, end).
+- Allows for custom handling of these events, such as logging or reporting.
+
+**Logging:**
+- Captures and displays logs related to test execution.
+- Provides detailed error messages and stack traces for failed tests.
+
+**Summary Generation:**
+- Aggregates and summarizes test results, providing a high-level overview of the test execution.
+- Includes metrics such as the number of tests passed, failed, skipped, and the total execution time.
+
+
+
 Pieces
     - test-runner - executor
     - formatter
@@ -68,6 +117,20 @@ Executor challenges
 Reporters
     - Show how many reporters nodejs support
     - demo reporters
+    - challenge
+        = in parallel, so how do you sync them?
+            bc it'd be slow right? like file 1 is setting data every 20ms and file 2 is sending every 10ms, so you'd hold all messages from file2 until file 2 is finished
+
+            The only challenge is in printing the received messages from multiple files in order
+    - Moshe Atlow:
+        Well id say it's exactly what you expect from a test runner, doesn't do anything more than the essentials which is what makes it very fast
+
+- Plus
+    - What if we run a complete app on this?
+    - demo
+
+
+
 
 
 
