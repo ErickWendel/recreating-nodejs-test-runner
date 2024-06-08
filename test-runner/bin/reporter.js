@@ -1,3 +1,11 @@
+import { styleText } from 'node:util';
+
+const green = msg => styleText('green', msg);
+const yellow = msg => styleText('yellow', msg);
+const blue = msg => styleText('blue', msg);
+const gray = msg => styleText('gray', msg);
+const red = msg => styleText('red', msg);
+
 class Reporter {
     #formatter
     constructor(formatter) {
@@ -19,6 +27,10 @@ class Reporter {
     printSummary(tests, elapsedMs) {
         const summary = this.#formatter.generateSummary(tests, elapsedMs);
         console.log(summary);
+        console.log(gray('.'.repeat(33)), '\n');
+        console.log(`${yellow('Made')} ${blue('with ')}${red('love by')} ${green(`Erick Wendel`)} ${yellow(':)')}`);
+        console.log(`${green('@erickwendel_')}`);
+        console.log(gray('.'.repeat(33)));
     }
 }
 

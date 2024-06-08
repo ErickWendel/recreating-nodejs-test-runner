@@ -25,3 +25,50 @@ cli
 
 ---
 
+
+Talk plan
+
+Node.js test runner
+    - features
+    - really fast
+    - uses internal node.js algorithms and leverage the C++ power
+
+Why recreating stuff ?
+    ESLINT
+    Uglify
+    WebSocket
+    Node.js
+Now
+    Node.js test runner
+
+I'm part of the nodejs
+    - implemented the first draft of mock timers
+
+But whats a test runner ?
+    1. CLI that receives a folder and executes files
+    2. Module that can order and report errors
+
+Pieces
+    - test-runner - executor
+    - formatter
+    - reporter
+
+Executor challenges
+    - Must run data in parallel
+    - Must know the call three
+        - describe and it can be declared in any place and you should know the tree back
+        - how?
+    - Introducing Async Hooks
+    - Introducing Async LocalStorage
+        - show Web API Example
+            - users are concurrent, we won't like to use global variables and store user's data across sessions
+    - Creating the first demo
+    - Running demo  - show demo on test-runner (creating test )
+
+Reporters
+    - Show how many reporters nodejs support
+    - demo reporters
+
+
+
+

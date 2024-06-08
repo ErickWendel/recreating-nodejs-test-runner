@@ -1,3 +1,5 @@
 ![](./demo.png)
 
-Todo: fix before and beforeEach hooks to be executed after all file was loaded
+Todo:
+- add feature so before and beforeEach executes inside sub suites
+- fix log

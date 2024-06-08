@@ -1,7 +1,6 @@
 import { fork } from 'node:child_process';
 import fs from 'node:fs/promises';
 import { events } from './../shared/vars.js';
-import { resolve } from 'node:path';
 
 class TestRunner {
     constructor(folderName, formatter, reporter) {

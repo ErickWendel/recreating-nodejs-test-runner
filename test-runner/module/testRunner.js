@@ -11,14 +11,8 @@ class TestRunner extends EventEmitter {
     constructor() {
         super();
         // todo: fix output
-        console.log(green('running executing: ' + this.#getFileOriginName()))
+        // console.log(green('running executing: ' + this.#getFileOriginName()))
     }
-
-    #emit(event, data) {
-        super.emit(event, data);
-        process.send?.({ event, data });
-    }
-
     describe(name, fn) {
         const suite = new TestSuite(name);
         const context = asyncLocalStorage.getStore() || {};
@@ -41,6 +35,11 @@ class TestRunner extends EventEmitter {
     before(hookFn) {
         const suite = this.#getCurrentSuite();
         suite.beforeHooks.push(this.#wrapTest({ name: 'before', type: 'before' }, hookFn));
+    }
+
+    #emit(event, data) {
+        super.emit(event, data);
+        process.send?.({ event, data });
     }
 
     beforeEach(hookFn) {

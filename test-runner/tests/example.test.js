@@ -31,6 +31,10 @@ describe('My suite 0', () => {
         ctx.diagnostic.log('beforeEach!');
     })
 
+    it('test pass 00', async (ctx) => {
+        ctx.diagnostic.log('hey logger!');
+        deepStrictEqual({ d: 1 }, { d: 1 });
+    });
     // todo: t.logger.count
     describe('My sub-suite 0', () => {
         it('test pass 00', async (ctx) => {

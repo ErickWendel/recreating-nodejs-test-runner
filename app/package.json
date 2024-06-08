@@ -1,0 +1,25 @@
+{
+  "name": "testes-com-bancos-de-dados",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "DB_NAME=customers node src/index.js",
+    "dev": "DB_NAME=customers node --watch src/index.js",
+    "test": "NODE_ENV=test node ./../test-runner/bin/index.js --test test/",
+    "test:dev": "NODE_ENV=test node --watch ./../test-runner/bin/index.js --test test/",
+    "test:debug": "NODE_ENV=test node --watch --inspect ./../test-runner/bin/index.js --test test/",
+    "seed": "node src/db-seed/seed.js"
+  },
+  "keywords": [],
+  "author": "erickwendel",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "fastify": "^4.26.1",
+    "mongodb": "^6.7.0"
+  },
+  "engines": {
+    "node": "v20.12.1"
+  }
+}
