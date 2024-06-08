@@ -54,3 +54,5 @@ at AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
 ℹ fail 2
 ℹ duration_ms 37.81
 ```
+
+Todo: fix before and beforeEach hooks to be executed after all file was loaded
