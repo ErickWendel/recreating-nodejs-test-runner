@@ -1,0 +1,26 @@
+{
+  "name": "test-runner-from-scratch",
+  "version": "0.0.1",
+  "main": "index.js",
+  "bin": {
+    "ew-test-runner": "./bin/index.js"
+  },
+  "exports": {
+    "ew-test-runner-module": "./module/index.js"
+  },
+  "scripts": {
+    "start": "ew-test-runner --test tests",
+    "test:debug": "node --inspect --watch bin/index.js --test tests"
+  },
+  "keywords": [],
+  "author": "erickwendel",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": "v18.17.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "description": ""
+}

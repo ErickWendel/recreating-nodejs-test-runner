@@ -1,0 +1,27 @@
+folder
+    e2e.test.js
+    unit.test.js
+
+cli
+    node --test-runner folder
+
+    cp
+
+- async contexts ok
+- parallelism ok
+- reporter-tracker
+    - error
+    - success
+- reporter-executor
+// ℹ tests 2
+// ℹ suites 2
+// ℹ pass 2
+// ℹ fail 0
+// ℹ cancelled 0
+// ℹ skipped 0
+// ℹ todo 0
+// ℹ duration_ms 54.868709
+
+
+---
+
