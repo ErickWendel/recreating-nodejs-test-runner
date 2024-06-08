@@ -56,11 +56,11 @@ describe('My suite 0', () => {
 
         it('test fails', async (ctx) => {
             ctx.diagnostic.log('test fails!');
-            deepStrictEqual({ d: 2 }, { d: 1 });
+            deepStrictEqual({ name: 'bob' }, { name: 'sara' });
         });
         it('test fails 02', async (ctx) => {
             ctx.diagnostic.log('test fails!');
-            deepStrictEqual({ d: 2 }, { d: 1 });
+            deepStrictEqual({ total: 20 }, { total: 100 });
         });
     });
 });

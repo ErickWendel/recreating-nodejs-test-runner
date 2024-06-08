@@ -1,14 +1,17 @@
+import { styleText } from 'node:util';
 import { EventEmitter } from 'events';
 import { AsyncLocalStorage } from 'async_hooks';
 import TestSuite from './testSuite.js';
 import { events } from './../shared/vars.js';
+const green = msg => styleText('green', msg);
 
 const asyncLocalStorage = new AsyncLocalStorage();
 
 class TestRunner extends EventEmitter {
     constructor() {
         super();
-        this.fileOriginName = this.#getFileOriginName();
+        // todo: fix output
+        console.log(green('running executing: ' + this.#getFileOriginName()))
     }
 
     #emit(event, data) {
