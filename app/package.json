@@ -6,7 +6,7 @@
   "scripts": {
     "start": "DB_NAME=customers node src/index.js",
     "dev": "DB_NAME=customers node --watch src/index.js",
-    "test": "NODE_ENV=test node ./../test-runner/bin/index.js --test test/",
+    "test": "NODE_ENV=test ./../test-runner/bin/index.js --test test/",
     "test:dev": "NODE_ENV=test node --watch ./../test-runner/bin/index.js --test test/",
     "test:debug": "NODE_ENV=test node --watch --inspect ./../test-runner/bin/index.js --test test/",
     "seed": "node src/db-seed/seed.js"
