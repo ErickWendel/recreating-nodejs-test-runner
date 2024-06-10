@@ -5,11 +5,9 @@
   "bin": {
     "ew-test-runner": "./bin/index.js"
   },
-  "exports": {
-    "ew-test-runner-module": "./module/index.js"
-  },
   "scripts": {
-    "start": "ew-test-runner --test tests",
+    "start": "node ./bin/index.js --test tests",
+    "test": "node ./bin/index.js --test tests",
     "test:debug": "node --inspect --watch bin/index.js --test tests"
   },
   "keywords": [],
@@ -17,7 +15,7 @@
   "license": "ISC",
   "type": "module",
   "engines": {
-    "node": "v18.17.0"
+    "node": "v20.14.0"
   },
   "directories": {
     "test": "tests"
