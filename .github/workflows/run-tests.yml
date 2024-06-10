@@ -1,4 +1,4 @@
-name: Docker Actions
+name: Test Runner EW
 
 on:
   push:

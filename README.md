@@ -1,6 +1,6 @@
 # Node.js Custom Test Runner Experiment
 
-[![Build Status](https://github.com/ErickWendel/recreating-nodejs-test-runner/workflows/Docker%20Actions/badge.svg)](https://github.com/ErickWendel/recreating-nodejs-test-runner/actions)
+[![Build Status](https://github.com/ErickWendel/recreating-nodejs-test-runner/workflows/Test%20Runner%20EW/badge.svg)](https://github.com/ErickWendel/recreating-nodejs-test-runner/actions)
 
 
 ## Introduction
