@@ -25,7 +25,9 @@ jobs:
         sudo mv /tmp/docker-compose /usr/local/bin/docker-compose
 
     - name: Start localstack
-      run: docker-compose up -d mongodb
+      run: |
+      cd ./app
+      docker-compose up -d mongodb
 
     - name: Use Node.js
       uses: actions/setup-node@v4
