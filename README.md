@@ -1,5 +1,4 @@
-[![Build Status](https://github.com/ErickWendel/recreating-nodejs-test-runner/workflows/run-tests/badge.svg)](https://github.com/ErickWendel/recreating-nodejs-test-runner/actions)
-
+[![Build Status](https://github.com/ErickWendel/recreating-nodejs-test-runner/workflows/Docker%20Actions/badge.svg)](https://github.com/ErickWendel/recreating-nodejs-test-runner/actions)
 
 ![](./demo.png)
 
