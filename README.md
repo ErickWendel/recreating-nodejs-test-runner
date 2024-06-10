@@ -1,4 +1,5 @@
-[![Build Status](https://github.com/ErickWendel/Breadcrumbsrecreating-nodejs-test-runner/workflows/run-tests/badge.svg)](https://github.com/ErickWendel/Breadcrumbsrecreating-nodejs-test-runner/actions)
+[![Build Status](https://github.com/ErickWendel/recreating-nodejs-test-runner/workflows/run-tests/badge.svg)](https://github.com/ErickWendel/recreating-nodejs-test-runner/actions)
+
 
 ![](./demo.png)
 
