@@ -24,10 +24,10 @@ jobs:
         chmod +x /tmp/docker-compose
         sudo mv /tmp/docker-compose /usr/local/bin/docker-compose
 
-    - name: Start localstack
+    - name: Start MongoDB
       run: |
-      cd ./app
-      docker-compose up -d mongodb
+            cd ./app
+            docker-compose up -d mongodb
 
     - name: Use Node.js
       uses: actions/setup-node@v4
@@ -45,4 +45,6 @@ jobs:
           npm test
 
     - name: Clean up
-      run: docker-compose down --volumes
+      run: |
+            cd ./app
+            docker-compose down --volumes
