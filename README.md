@@ -60,52 +60,9 @@ npm test
 ```
 ![](./demo.png)
 
+## Try at home!
 
-### Running the Tests
-
-To run the tests using the custom test runner, use the following command:
-
-```sh
-npm test
-```
-
-## Example Outputs
-
-### Test Runner Output
-
-Below is an example output of the test runner:
-
-```sh
-$ npm test
-
-> recreating-nodejs-test-runner@1.0.0 test
-> node test-runner.js
-
-✔️  Test Suite: User API
-   ✔️  should create a new user
-   ✔️  should get a user by ID
-   ✔️  should update a user
-   ✔️  should delete a user
-```
-
-### App Output
-
-Below is an example output of the app's test suite using the custom test runner:
-
-```sh
-$ npm test
-
-> recreating-nodejs-test-runner@1.0.0 test
-> node app/test-runner.js
-
-✔️  Test Suite: User API
-   ✔️  should create a new user
-   ✔️  should get a user by ID
-   ✔️  should update a user
-   ✔️  should delete a user
-
-All tests passed!
-```
+See at [the example](./test-runner/tests/example.test.js) and execute one of your applications there :)
 
 ## Contributing
 
