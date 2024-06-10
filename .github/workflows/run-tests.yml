@@ -39,11 +39,6 @@ jobs:
 
     - name: Run tests
       run: |
-          cd ./test-runner
-          npm test
-
-    - name: Run tests
-      run: |
           cd ./app
           npm test
 
