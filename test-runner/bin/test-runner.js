@@ -22,9 +22,10 @@ class TestRunner {
         for (const file of files) {
             finished.push(this.runTestFile(file));
         }
-        await Promise.all(finished)
+        const results = await Promise.all(finished)
 
         this.reporter.printSummary(this.tests, this.formatter.calcElapsed(this.startedAt));
+        return results.some(result => result === 'error')
 
     }
 
@@ -76,8 +77,9 @@ class TestRunner {
             console.error(err)
         })
 
-        return new Promise(resolve => cp.once('exit', resolve)).finally(() => {
+        return new Promise(resolve => cp.once('exit', resolve)).then(() => {
             this.reporter.updateOutput(this.results, this.formatter);
+            return this.tests.failing > 0 ? 'error' : 'success'
         })
     }
 }

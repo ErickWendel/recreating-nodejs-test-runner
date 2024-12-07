@@ -77,7 +77,7 @@ describe('API Workflow', () => {
         const { _id, ...output } = result.at(0)
         ok(_id)
 
-        deepStrictEqual(statusCode, 200)
+        deepStrictEqual(statusCode, 201)
         deepStrictEqual(output, customers.find(customer => customer.name === name))
     })
 

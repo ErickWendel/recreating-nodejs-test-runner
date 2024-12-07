@@ -18,4 +18,5 @@ const formatter = new Formatter();
 const reporter = new Reporter(formatter);
 const testRunner = new TestRunner(folder, formatter, reporter);
 
-testRunner.runTests();
+const hasError = await testRunner.runTests();
+process.exit(hasError ? 1 : 0)
