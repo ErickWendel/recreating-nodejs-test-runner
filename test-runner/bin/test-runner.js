@@ -38,7 +38,11 @@ class TestRunner {
             events.testPass,
             events.testFail
         ];
-
+        const shouldNotCount = (event, name) => (
+            hooksNotPrint.includes(name)
+            &&
+            event !== events.log
+        )
         cp.on('message', ({ event, data }) => {
             if (!event) return;
 
@@ -48,6 +52,7 @@ class TestRunner {
                     this.tests.suites++;
                     break;
                 case events.testPass:
+                    if (shouldNotCount(event, data.name)) break;
                     this.tests.passing++;
                     break;
                 case events.testFail:
@@ -57,18 +62,13 @@ class TestRunner {
                     break;
             }
 
-            if (
-                hooksNotPrint.includes(data.name)
-                &&
-                event !== events.log
-            ) return;
+            if (shouldNotCount(event, data.name)) return;
 
             if (!eventsOutput.includes(event)) return;
 
             const formattedResult = this.formatter.formatTestResult(data, event);
             this.results.set(data.tree, this.results.get(data.tree) || []);
             this.results.get(data.tree).push(formattedResult);
-            this.reporter.updateOutput(this.results, this.formatter);
         });
 
 
@@ -76,7 +76,9 @@ class TestRunner {
             console.error(err)
         })
 
-        return new Promise(resolve => cp.once('exit', resolve))
+        return new Promise(resolve => cp.once('exit', resolve)).finally(() => {
+            this.reporter.updateOutput(this.results, this.formatter);
+        })
     }
 }
 
